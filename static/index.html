@@ -20,9 +20,38 @@
     <uxContainer>
         <uxRow>
             <uxCol class="col-md-4"> some content </uxCol>
-            <uxCol class="col-md-8"> second column </uxCol>
+            <uxCol class="col-md-4"> second column </uxCol>
+            <uxCol class="col-md-4"> third column </uxCol>
         </uxRow>
-    </div>
+    </uxContainer>
+    <hr>
+    <uxContainer>
+        <uxRow>
+            <uxCol class="col-md-6">
+                <uxButton type="input" class="btn-success">Success</uxButton>
+                <uxButton type="button" class="btn-primary">Primary</uxButton>
+                <uxButton type="a" class="btn-link" href="#test">Link</uxButton>
+            </uxCol>
+        </uxRow>
+    </uxContainer>
+    <hr>
+    <uxContainer>
+        <uxRow>
+            <uxCol class="col-md-6">
+                <uxButton type="input" class="btn-success">Success</uxButton>
+                <uxButton type="button" class="btn-primary">Primary</uxButton>
+                <uxButton type="a" class="btn-link" href="#test">Link</uxButton>
+            </uxCol>
+        </uxRow>
+    </uxContainer>
+    <hr>
+    <uxContainer>
+        <uxRow>
+            <uxCol class="col-md-4">
+                <uxInput type="text" class="form-control" placeholder="Enter text"></uxButton>
+            </uxCol>
+        </uxRow>
+    </uxContainer>
 </script>
 
 
@@ -38,6 +67,26 @@
 <script id="uxContainer" type="x-template">
     <div class="{{class || 'container'}}">{{>content}}</div>
 </script>
+
+<script id="uxA" type="x-template">
+    {{! <!--<a class="btn btn-default" href="#" role="button">Link</a>--> }}
+    <a class="{{classD}} {{class}}"
+       href="{{href || '#'}}"
+       role="{{role}}">{{>content}}</a>
+</script>
+<script id="uxButton" type="x-template">
+    {{! <!--<button class="btn btn-default" type="submit">Button</button>--> }}
+    <button class="{{classD}} {{class || 'btn-default'}}"
+            type="{{type || 'submit'}}">{{>content}}</button>
+</script>
+<script id="uxInput" type="x-template">
+    {{! <!--<input class="btn btn-default" type="button" value="Input">--> }}
+    <input class="{{classD}} {{class}}"
+           type="{{type === 'input' ? 'button' : 'input'}}"
+           value="{{>content}}"
+           placeholder="{{placeholder}}" />
+</script>
+
 
 <script src='/js/main.js'></script>
 <script src='/vendors/ractive/ractive.js'></script>

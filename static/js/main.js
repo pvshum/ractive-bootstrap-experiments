@@ -10,7 +10,25 @@ document.addEventListener('DOMContentLoaded', function () {
         }),
         uxContainer: Ractive.extend({
             template: '#uxContainer'
+        }),
+
+        uxButton: Ractive.extend({
+            template: function (data) {
+                return {
+                        'a': '#uxA',
+                        'button': '#uxButton',
+                        'input': '#uxInput'
+                    }[data.type] || '#uxButton';
+            },
+            data: {
+                classD: 'btn'
+            }
+        }),
+
+        uxInput: Ractive.extend({
+            template: '#uxInput'
         })
+
     };
 
     var options = {

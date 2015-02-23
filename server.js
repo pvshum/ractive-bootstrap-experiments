@@ -7,7 +7,7 @@ var cfg = {
     port: 4080
 };
 
-app.use(express.static(__dirname + '/' + public_folder));
+app.use(express.static(__dirname + '/static' + public_folder));
 
 app.listen(cfg.port);
 

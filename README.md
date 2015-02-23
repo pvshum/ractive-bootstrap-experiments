@@ -1,6 +1,6 @@
 # ractive-bootstrap-experiments
 
-Experimenting with building [Ractive.js](http://www.ractivejs.org/) components based on [Bootstrap](http://getbootstrap.com/)  markup and styles and.
+Experimenting with building [Ractive.js](http://www.ractivejs.org/) components based on [Bootstrap](http://getbootstrap.com/)  markup and styles.
 
 Current repository is a __work in progress__, with one page POC demonstrating basic approach.
 

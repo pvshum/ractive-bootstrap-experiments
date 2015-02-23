@@ -16,7 +16,7 @@ module.exports = function(grunt) {
             tasks: ['jshint'],
             ra: {
                 files: 'static/**/*.*',
-                tasks: ['jshint'],
+                tasks: ['jshint', 'copy'],
                 options: {
                     livereload: true
                 }
@@ -25,10 +25,8 @@ module.exports = function(grunt) {
         copy: {
             main: {
                 files: [
-                    // includes files within path
                     {expand: true, cwd: 'node_modules', src: ['ractive/*'], dest: 'static/vendors/'},
                     {expand: true, cwd: 'node_modules/bootstrap/dist', src: ['**/*.*'], dest: 'static/vendors/bootstrap'}
-
                 ]
             }
         }
